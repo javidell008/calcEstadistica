@@ -14,4 +14,4 @@ Go to the project folder with ``$ cd calcEstadistica``and use the tool with ``$ 
 I'm open to keep improving the project. You can help opening a pull request or an issue.
 
 ## License
-See the LICENSE.md
+See **LICENSE.md**
