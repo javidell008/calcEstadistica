@@ -6,7 +6,7 @@ average, the mode, the medium, the variance and the typical deviation.
 
 Install a python interpreter with a linux terminal `` $ sudo apt-get install python3 `` or using brew in macOS `` brew install python3 `` 
 
-Clone the repository using git with ``$ git clone github.com/put0c0rd0b3/calcEstadistica ``
+Clone the repository using git with ``$ git clone github.com/javidell008/calcEstadistica ``
 
 Go to the project folder with ``$ cd calcEstadistica``and use the tool with ``$ python3 calcEstadistica.py ``
 
