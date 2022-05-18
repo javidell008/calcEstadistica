@@ -1,10 +1,9 @@
 from statistics import median, mode, pstdev, variance, pstdev
 print("Bienvenido a calcEstadistica \n")
 datos_estudio = [] # Inicializamos la lista que contiene los datos de la muestra.
-datos_muestra = int(input("Introduzca el primer dato de la muestra a estudiar: "))
-datos_estudio.append(datos_muestra)
-while input("¿Existen mas datos a estudiar? [S/N]") == "S":
-    datos_muestra = int(input("Introduzca el primer dato de la muestra a estudiar: "))
+num_estudio = int(input("¿Cuantos datos componen la muestra a estudiar?"))
+for i in range(1, num_estudio + 1):
+    datos_muestra = int(input("Introduzca el dato de la muestra a estudiar: "))
     datos_estudio.append(datos_muestra) # Introducimos los datos y los almacenamos en la lista previamente definida.
 datos_estudio.sort()
 media = sum(datos_estudio) / len(datos_estudio) # Calculamos la media.
