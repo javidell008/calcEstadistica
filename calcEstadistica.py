@@ -1,10 +1,19 @@
-from statistics import median, mode, pstdev, variance, pstdev
+from statistics import median, mode, pstdev, variance
+import xlrd
+import pandas as pd
 print("Bienvenido a calcEstadistica \n")
+archivo = input("Introduce la ruta en la que tienes almacenado tu archivo de Excel: \n")
+wb = xlrd.open_workbook(archivo)
+
 datos_estudio = [] # Inicializamos la lista que contiene los datos de la muestra.
-num_estudio = int(input("¿Cuantos datos componen la muestra a estudiar?"))
-for i in range(1, num_estudio + 1):
-    datos_muestra = int(input("Introduzca el dato de la muestra a estudiar: "))
-    datos_estudio.append(datos_muestra) # Introducimos los datos y los almacenamos en la lista previamente definida.
+num_estudio = int(input("¿Cuántos datos componen la muestra a estudiar?"))
+hoja = wb.sheet_by_index(0) 
+c = 1
+while c < num_estudio:
+    columna = hoja.cell_value(1, c)
+    c+=1
+    datos_estudio.append(columna)
+
 datos_estudio.sort()
 media = sum(datos_estudio) / len(datos_estudio) # Calculamos la media.
 mediana = median(datos_estudio) # Calculamos la mediana.
