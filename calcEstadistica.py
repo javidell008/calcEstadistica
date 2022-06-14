@@ -4,15 +4,15 @@ import pandas as pd
 print("Bienvenido a calcEstadistica \n")
 archivo = input("Introduce la ruta en la que tienes almacenado tu archivo de Excel: \n")
 wb = xlrd.open_workbook(archivo)
-
 datos_estudio = [] # Inicializamos la lista que contiene los datos de la muestra.
 num_estudio = int(input("¿Cuántos datos componen la muestra a estudiar?"))
 hoja = wb.sheet_by_index(0) 
-c = 1
-while c < num_estudio:
-    columna = hoja.cell_value(1, c)
-    c+=1
-    datos_estudio.append(columna)
+def excel():
+    for c in range (1, num_estudio+1):
+        c+=1
+        columna = hoja.cell_value[1, c]
+        datos_estudio.append(columna)
+    return datos_estudio
 
 datos_estudio.sort()
 media = sum(datos_estudio) / len(datos_estudio) # Calculamos la media.
